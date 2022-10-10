@@ -6,11 +6,15 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AddcourseComponent } from './addcourse/addcourse.component';
 import { RouterModule, Routes } from '@angular/router';
+import { ViewallcoursesComponent } from './viewallcourses/viewallcourses.component';
 
 const appRoutes :Routes=[
 
   {
     path:"",component:AddcourseComponent
+  },
+  {
+    path:"view",component:ViewallcoursesComponent
   }
 ]
 
@@ -18,7 +22,8 @@ const appRoutes :Routes=[
   declarations: [
     AppComponent,
     NavbarComponent,
-    AddcourseComponent
+    AddcourseComponent,
+    ViewallcoursesComponent
   ],
   imports: [
     BrowserModule,
