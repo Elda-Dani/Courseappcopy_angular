@@ -16,6 +16,8 @@ export class AddcourseComponent implements OnInit {
   courseDate=""
   courseVenue=""
 
+status:boolean=false
+
   readValue=()=>{
     let data={
       "courseTitle":this.courseTitle,
@@ -29,6 +31,12 @@ this.myapi.addCourse(data).subscribe(
   (resonse)=>{
     console.log(resonse)
     alert("Successfully Added")
+    this.courseTitle=""
+    this.courseDescription=""
+     this.courseDuration=""
+     this.courseDate=""
+     this.courseVenue="" 
+     this.status=true
   }
 )
   }
